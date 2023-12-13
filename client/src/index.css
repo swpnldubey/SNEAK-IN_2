@@ -1,0 +1,888 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'ClashDisplay-Medium';
+  src: url('./fonts/ClashDisplay-Medium.ttf') format('truetype');
+       font-weight: 500;
+       font-display: swap;
+       font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sceageus';
+  src: url('./fonts/Sceageus.otf') format('opentype');
+}
+
+::-webkit-scrollbar {
+  display: none;
+   -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;
+}
+
+.topbar{
+position: sticky;
+top: 0px;
+z-index: 49;
+}
+
+
+.dots-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  margin-right: 10px;
+  border-radius: 10px;
+  background-color: #fff;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.dot:last-child {
+  margin-right: 0;
+}
+
+.dot:nth-child(1) {
+  animation-delay: -0.3s;
+}
+
+.dot:nth-child(2) {
+  animation-delay: -0.1s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.1s;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.8);
+    background-color: hsl(0, 0%, 0%);
+    box-shadow: 0 0 0 0 rgb(0, 0, 0)
+  }
+
+  50% {
+    transform: scale(1.2);
+    background-color: #000000;
+    box-shadow: 0 0 0 10px rgb(0, 0, 0)
+  }
+
+  100% {
+    transform: scale(0.8);
+    background-color: #000000;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7)
+  }
+}
+
+.App{
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.blur{
+  position: absolute;
+  width: 22rem;
+  height: 14rem;
+  border-radius: 50%;
+  background: rgb(255, 184, 184);
+  filter: blur(72px)
+}
+
+          /* Login page */
+
+          h1{
+            text-align: center;
+            margin: auto ;
+            /* padding: 0 0 0 10px; */
+            font-family: 'Sceageus';
+            font-weight: 500;
+            font-size: 4em;
+            color: #EE2422;
+          }
+
+          h1 a{
+            text-shadow: 2 2 8px #000000 50%;
+            text-decoration: none;
+            color: #EE2422;
+            cursor: pointer;
+          }
+
+          h1 #login{
+            text-shadow: 2 2 8px #000000 50%;
+            text-decoration: none;
+            color: #EE2422;
+            cursor: pointer;
+          }
+
+          .register{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 60px auto;
+            width: auto;
+            height: auto;;;
+      
+          }
+          .register h3{
+            margin: 50px 0 10px;
+            font-weight: 300;
+            font-family: 'ClashDisplay-Medium', sans-serif;
+            color: rgb(0, 0, 0);
+            font-size: 2em;
+          }
+
+          .register #experience{
+            font-family: 'ClashDisplay-Medium', sans-serif;
+            opacity: 80%;
+            text-align: center;
+            align-items: center;
+            margin: 0 0 25px;
+            font-size: 1.2em;
+            font-weight: 200;
+            color: rgb(97, 97, 97);
+          }
+
+          :placeholder-shown{
+            opacity: 40%;
+          }
+
+          input[
+            type="text"
+          ]{
+            margin: 10px 0 10px 0px;
+            width: 360px;
+            height: 40px;
+            border: 2px solid rgb(0, 0, 0);
+            border-radius: 10px;
+            padding: 0 0 0 10px;
+            font-family: 'ClashDisplay-Medium', sans-serif;
+            font-size: 1em;
+            color: black;
+            background-color: transparent;
+          }[
+          type="submit"
+          ]{
+            align-self: center;
+            justify-content: center;
+            margin: 0 auto;
+            width: 150px;
+            height: 50px;
+            text-align: center;
+            font-family: 'ClashDisplay-Medium';
+            border: 2px solid rgb(0, 0, 0);
+            border-radius: 25px;
+            background-color: #EE2422;
+            color: rgb(255, 255, 255);
+            font-size: 1.5em;
+            padding: 5px 20px;
+            align-items: center;
+            cursor: pointer;
+          } 
+
+          label{
+            margin: auto;
+            margin-left: 20px ;
+            font-family: 'ClashDisplay-Medium', sans-serif;
+            font-size: 1.2em;
+            color: rgb(0, 0, 0);
+          }
+
+          h2{
+            margin: 10px 0 10px 20px;
+            font-family: 'ClashDisplay-Medium', sans-serif;
+            font-size: 2em;
+            text-align: center;
+            color: rgb(0, 0, 0);
+          }
+          
+          form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            width: 400px;
+            height: auto;
+            border: 2px solid rgba(130, 130, 130, 0.533) ;
+            border-radius: 20px;
+            padding: 10px 0 10px 0;
+            background-color: transparent;
+          }
+
+          /*  Page */
+
+          /* .sneak_in{
+            display: flex;
+            gap: 0.75rem;
+        } */
+
+        .Home{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            width: 100%;
+            height: auto;
+            background-color: transparent;
+        }
+        
+        .Search{
+            display: flex;
+            gap: 0.75rem;
+            background-color: transparent;
+            color: black;
+            border-radius: 10px;
+            padding: 5px;
+        }
+        
+        .Search>input{
+            background-color: transparent;
+            border:1px solid gray;
+            outline: none;
+            color: black;
+        }
+        
+        .s-icon{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ee2422;
+            border-radius: 5px;
+            padding: 4px;
+            color: white;
+        }
+
+        hr{
+            width: 100%;
+            height: 1px;
+            background-color: rgb(0, 0, 0);
+            border: none;
+            margin-bottom: 1rem;
+        }
+        
+        .s-icon:hover{
+            cursor: pointer;
+        }
+
+        .Posts{
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;   
+      }
+
+      /* Landing Page  */
+
+      .landing {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+      }
+      
+      .navbar-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: auto;
+        align-items: center;
+        padding: 20px;
+        background-color: #000000;
+        color: white;
+        margin: 0 0 10rem 0;
+      }
+
+      .navbar-container h1{
+        font-family: 'Sceageus';
+        font-size: 3em;
+        margin-left: 0;
+        text-align: left;
+        align-self: left;
+        padding: 0;
+      }
+
+      .navbar-container h1 a{
+        text-decoration: none;
+        cursor: pointer;
+      }
+    
+      
+      .nav-links {
+        display: flex;
+        gap: 20px;
+        font-family: 'ClashDisplay-Medium';
+        font-size: large;
+      }
+
+      .nav-links a:hover{
+        border: 2px solid #ee2242;
+        border-radius: 10px;
+        padding: 5px;
+      }
+      
+      .main-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .tagline{
+        text-align: center;
+      }
+      .tagline h2{
+        text-align: center;
+        font-size: 3em;
+        padding: 0;
+        word-spacing: normal;
+        margin-bottom: 10px;
+      }
+
+      .tagline button{
+        text-align: center;
+        font-size: 1.2em;
+        padding: 10px 20px;
+        background-color: #7f7d7d;
+        border: 2px solid rgb(255, 255, 255);
+        border-radius: 10px;
+        margin-bottom: 10px;
+        color: rgb(0, 0, 0);
+        font-family: 'ClashDisplay-Medium';
+        margin-bottom: 3rem ;
+      }
+
+      .tagline  button:hover{
+        background-color: white;
+        border: 2px solid #ee2242;
+        color: black;
+      }
+    
+      .slider-container {
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        margin: 50px 10px 100px 10px;
+        align-items: center;
+      }
+
+      .slider {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        max-width: 100%;
+      }
+
+      .slide {
+        min-width: 100%;
+        overflow: hidden;
+      }
+
+      img {
+        width: auto;
+        height: 400px;
+      }
+
+      
+      footer {
+        background-color: #000000;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+      }
+      
+      .footer-links {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+      }
+      
+      .footer-links a {
+        color: white;
+        text-decoration: none;
+      }
+      
+      
+      /* Posts */
+
+      .Posts{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        width: 80%;
+        height: auto;
+        background-color: transparent;
+      }
+
+      .Post{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        width: 50%;
+        height: auto;
+      }
+
+      .Post .pfp{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 0 auto;
+        width: 100%;
+        gap: 0.5rem;
+      }
+
+      .Post .pfp a{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        text-decoration: none;
+        gap: 0.5rem;
+        color: black;
+      }
+
+      .Post .pfp a>img{
+        width: 30px;
+        height: 30px;
+        border: 1px solid black;
+        border-radius: 50%;
+        margin-bottom: 5px;
+      }
+
+      .Post .pfp a>h4{
+        color: black;
+        font-size: 1em;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* font-family: 'ClashDisplay-Medium'; */
+        font-weight: 600;
+      }
+
+      .Post>img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+
+      .post-info{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin: 0 auto;
+        width: 100%;
+        gap: 0.5rem;
+        align-items: center;
+      }
+
+      .post-info>img{
+        width: 40px;
+        height: 30px;
+        margin: 0 0 0 5px ;
+      }
+
+      .post-info>span{
+        margin-top: 5px;
+        margin-bottom: 0;
+        background-color: transparent;
+        font-family: 'ClashDisplay-Medium';
+        border: 2px solid #000000;
+        border-radius: 10px;
+        padding: 2px 4px;
+        color: #000000;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      .post-info>span:hover{
+        background-color: #ee2242;
+        border: 2px solid black;
+        color: black;
+      }
+
+      .details{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0.5rem;
+        margin: 0 0;
+        width: 100%;
+      }
+
+      .details>h2{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* font-family: 'ClashDisplay-Medium'; */
+        font-size: 1.2em;
+        font-weight: 400;
+        color: black;
+        margin-left: 0;
+        margin-top: 0;
+      }
+      
+      .details>p{
+        /* font-family: 'ClashDisplay-Medium'; */
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 1em;
+        font-weight: 500;
+        color: black;
+        margin-left: 0;
+        margin-top: 0;
+        align-self: center;
+      } 
+
+      .posting{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        width: 100%;
+      }
+
+      /* Profile */
+
+      .profile{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* justify-content: center; */
+        margin: 0 auto;
+        width: 50%;
+      }
+
+      .profile .profileInfo{
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        margin: 5px 0 0 0;
+        width: 50%;
+      }
+
+      .profileImages{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        height: auto;
+        margin: 0;
+        /* align-items: left; */
+        /* justify-content: left; */
+    }
+
+    .profileImages>img:nth-of-type(1) {
+      height: 100px;                  
+      width: 100%;
+    }
+  
+    .profileImages>img:nth-of-type(2)
+    {
+      align-self: left;
+      margin-left: 10px;
+      width: 80px;
+      height: 80px;
+      border: 2px solid black;
+      border-radius: 50%;
+      position: absolute;
+      bottom: -50px;
+    }
+
+    .follow-btn{
+      align-items: right;
+      justify-content: right;
+      display: flex;
+      height: auto;
+      width: auto;
+      margin: 2px 10px 10px 320px;
+      flex-direction: column;
+      padding: 2px 1px;
+      font-size: larger;
+    }
+
+    .follow-btn button{
+      font-family: 'ClashDisplay-Medium';
+      background-color: rgb(215, 215, 215);
+      border: 2px solid rgb(0, 0, 0);
+      border-radius: 20px;
+      padding: 2px 6px;
+      color: rgb(0, 0, 0);
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .profileInfo>h4{
+      color: #000000;
+      font-size: 1.5em;
+      margin-left: 0;
+    }
+
+    .profileInfo>span{
+      color: #000000;
+      font-size: 1.1em;
+      margin: 0 0 0 0;
+      opacity: 80%;
+    }
+
+    .profileInfo>p{
+      color: #000;
+      font-size: medium;
+    }
+
+    .profile .followers{
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+      width: 50%;
+      height: auto;
+      color: #7f7d7d;
+      margin-bottom: 5px;
+    }
+
+    #profile{
+      width: 50%;
+    }
+
+      @media screen and (max-width: 768px) {
+
+          h1{
+            text-align: center;
+            margin: auto ;
+            /* padding: 0 0 0 10px; */
+            font-family: 'Sceageus';
+            font-weight: 500;
+            font-size: 3em;
+            color: #EE2422;
+          }
+
+          /* Profile */
+
+          .profile{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* justify-content: center; */
+            margin: 0 0;
+            width: 100%;
+          }
+    
+          .profile .profileInfo{
+            margin: 5px 0 0 10px;
+            width: 100%;
+            gap: 0;
+            margin-bottom: 0;
+          }
+    
+          .profileImages{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: auto;
+            margin: 0;
+            /* align-items: left; */
+            /* justify-content: left; */
+        }
+    
+        .profileImages>img:nth-of-type(1) {
+          height: 120px;                  
+          width: 100%;
+        }
+      
+        .profileImages>img:nth-of-type(2)
+        {
+          align-self: left;
+          margin-left: 10px;
+          width: 100px;
+          height: 100px;
+          position: absolute;
+          bottom: -50px;
+          border: 2px solid black;
+          border-radius: 50%;
+        }
+    
+        .follow-btn{
+          align-items: right;
+          justify-content: right;
+          display: flex;
+          height: auto;
+          width: auto;
+          margin: 2px 2px 10px 400px;
+          flex-direction: column;
+          padding: 2px 1px;
+          font-size: larger;
+        }
+    
+        .profileInfo>h4{
+          color: #000000;
+          font-size: 1.5em;
+          margin: 0 0 0 5px;
+        }
+    
+        .profileInfo>span{
+          color: #000000;
+          font-size: 1.1em;
+          margin: 0 0 0 5px;
+          opacity: 80%;
+        }
+    
+        .profileInfo>p{
+          color: #000;
+          font-size: medium;
+          margin: 0 0 0 5px;
+          font-weight: 500;
+          font-size: medium;
+        }
+    
+        .profile .followers{
+          width: 100%;
+          height: auto;
+          color: #000000;
+        }
+
+        .profile .followers span{
+          margin: 0 0 0 10px;
+        }
+
+        #profile{
+          width: 100%;
+        }
+        
+        /* Posts */
+
+        .Posts{
+          margin: 0;
+          width: 100%;
+          height: auto;
+        }
+
+        .Post{
+          margin: 0 5px 2px 5px;
+          width: 100%;
+          height: auto;
+        }
+  
+        .Post .pfp{
+          margin: 0 0 0 10px;
+          width: 100%;
+          gap: 0.5rem;
+        }
+  
+        /* .Post .pfp a{
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: flex-start;
+          text-decoration: none;
+          gap: 0.5rem;
+          color: black;
+        } */
+  
+        /* .Post .pfp a>img{
+          width: 30px;
+          height: 30px;
+          border: 1px solid black;
+          border-radius: 50%;
+          margin-bottom: 5px;
+        } */
+  
+        /* .Post .pfp a>h4{
+          color: black;
+          font-size: 1em;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          font-weight: 600;
+        } */
+  
+        .Post>img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 10px;
+          border: 2px solid black;
+        }
+  
+        .post-info{
+          margin: 2px 0 0 5px ;
+          width: 100%;
+          gap: 0.5rem;
+          align-items: center;
+        }
+  
+        .post-info>img{
+          width: 40px;
+          height: 30px;
+          margin: 0 0 0 5px ;
+        }
+  
+        .post-info>span{
+          font-weight: 600;
+          font-size: large;
+        }
+  
+        .post-info>span:hover{
+          background-color: #000000;
+          border: 2px solid rgb(125, 125, 125);
+          color: rgb(255, 255, 255);
+        }
+  
+        .details{
+          gap: 0.5rem;
+          margin: 0 0 2px 2px;
+          width: 100%;
+        }
+  
+        .details>h2{
+          margin-left: 2px;
+        }
+        
+        .details>p{
+          margin-left: 0;
+          margin-bottom: 4px;
+          margin-top: 0;
+        }
+  
+        .posting{
+          width: 100%;
+        }
+
+        img{
+            width: 100%;
+            height: 650px;
+          }
+      }
+
+@layer base {
+  :root {
+    --color-bg: rgb(0, 0, 0);
+    --color-primary: rgb(0, 0, 0);
+    --color-secondary: rgb(0, 0, 0);
+    --color-ascent1: 0 0 0;
+    --color-ascent2: black;
+    --color-blue: black;
+    --color-white: black;
+  }
+  /* //15 23 42  21 30 49*/
+  [data-theme="dark"] {
+     --color-bg: 12 12 12;
+     --color-primary: black;
+    --color-secondary: black;
+    --color-ascent1: black;
+    --color-ascent2: rgb(0, 0, 0);
+    --color-blue: #000000;
+    /* //16 176 255; */
+    --color-white: black;
+  }
+}
+
