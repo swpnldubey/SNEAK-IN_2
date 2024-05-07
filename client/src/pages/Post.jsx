@@ -12,6 +12,9 @@ const Post = ({data}) => {
             <a href="/profile">
             <img src={sathaye} alt="not found" />
             <h4> <b>SATHAYE COLLEGE</b> </h4> </a>
+          <div className="details">
+            <p> {data.desc} </p>
+          </div>
         </div>
 
         <img src={data.image} alt="" />
@@ -23,10 +26,10 @@ const Post = ({data}) => {
 
         {/* <span style={{color: "black", fontSize: '12px'}}>{data.likes} likes</span> */}
 
-        <div className="details">
-            <h2><b>{data.username}</b></h2>
-            <p> {data.desc} </p>
-        </div>
+        {/* <div className="details"> */}
+            {/* <h2><b>{data.username}</b></h2> */}
+            {/* <p> {data.desc} </p>
+        </div> */}
         <hr className="posting" />
     </div>
   
