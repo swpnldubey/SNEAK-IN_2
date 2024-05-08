@@ -9,16 +9,25 @@ const Home = () => {
         <Navbar />
         <div className="main-content">
             <div className="tagline">
-                    <h2>SNEAK IN <br /> to your favourite colleges</h2>
-                    <a href="/login"> <button>SNEAK ME IN</button> </a>
+                    <h2>SNEAK IN <br /> 
+                    <span className='fav'> to your favourite colleges! </span></h2>
             </div>
+            <a href="/login"> <button className='explore-btn'>LET'S GO!</button> </a>
              <hr />
-        <Slider />
+
+            <div className='events'>
+                <h2 id='events'>Featured Events...</h2>
+                  <div className='slider-container'>
+                    <Slider />
+                  </div>
+            </div>
+<br />
+<br />
         </div>
         <footer>
             <div className="footer-links">
               <a href="#home">Home</a>
-              <a href="#privacy">Privacy Policy</a>
+              <a href="/privacy">Privacy Policy</a>
               <a href="#terms">Terms and Conditions</a>
             </div>
         </footer>

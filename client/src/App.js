@@ -1,5 +1,5 @@
 import {Home} from './pages'
-import { Login, Profile, Register} from './pages';
+import { Login, Register} from './pages';
 import { BrowserRouter as Router, Routes, Route, Navigate} from 'react-router-dom';
 import { navigate, useNavigate} from 'react-router-dom';
 import { useEffect } from 'react';
@@ -9,6 +9,7 @@ import './index.css';
 import Navbar from './pages/Navbar'
 import Slider from './pages/Slider'
 import {Platform} from './pages';
+import Modal from 'react-modal';
 
 // function Layout(){
   
@@ -50,8 +51,7 @@ function App() {
       <Routes>
            {/* <Route element={<Layout />}> */}
              <Route path='/platform' element={<Platform />} />
-             <Route path='/profile/:id?' element={<Profile />} />
-           {/* </Route> */}
+                        {/* </Route> */}
            <Route path='/register' element={<Register />} />
             <Route path='/' element={<Home />} />
            <Route path='/login' element={<Login />} />
@@ -61,6 +61,5 @@ function App() {
 
   );
 }
-
 
 export default App;
