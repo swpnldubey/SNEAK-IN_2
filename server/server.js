@@ -1,15 +1,3 @@
-// require('dotenv').config();
-// require('./database');
-// const express = require('express');
-// const cors = require('cors');
-// const mongoose = require('mongoose');
-// const bodyParser = require('body-parser');
-// // import { createAuthHandler, GoogleOAuthProvider } from '@react-oauth/google';
-// const { verifyAccessToken, checkIfUserIsRegistered } = require('../auth/google');
-// const User = require('./user');
-// import Google from './auth/google.js';
-
-
 import 'dotenv/config';
 import './database.js';
 import express from 'express';
@@ -20,8 +8,21 @@ import { verifyAccessToken, checkIfUserIsRegistered } from '../auth/google';
 import User from './user';
 import Google from './auth/google.js';
 
+// const env = require('./env'); // Import environment variables
 
-const app = express();
+// const app = express();
+
+// app.get('/api/env', (req, res) => {
+//     // Implement authentication/authorization if needed
+//     // For simplicity, we'll assume basic authentication here
+//     const isAuthorized = req.headers.authorization === 'your_secret_token'; // Replace with your authentication logic
+  
+//     if (isAuthorized) {
+//       res.json(env);
+//     } else {
+//       res.status(401).send('Unauthorized');
+//     }
+//   });  
 
 app.use(cors({
     origin: 'http://localhost:3000' 
