@@ -9,6 +9,7 @@ const Home = () => {
         <Navbar />
         <div className="main-content">
             <div className="tagline">
+<<<<<<< HEAD
                     <h2>SNEAK IN <br /> 
                     <span className='fav'> to your favourite colleges! </span></h2>
             </div>
@@ -23,11 +24,22 @@ const Home = () => {
             </div>
 <br />
 <br />
+=======
+                    <h2>SNEAK IN <br /> to your favourite colleges</h2>
+                    <a href="/login"> <button>SNEAK ME IN</button> </a>
+            </div>
+             <hr />
+        <Slider />
+>>>>>>> 936cb9252e355042c7693e22e6db8bd298c3d967
         </div>
         <footer>
             <div className="footer-links">
               <a href="#home">Home</a>
+<<<<<<< HEAD
               <a href="/privacy">Privacy Policy</a>
+=======
+              <a href="#privacy">Privacy Policy</a>
+>>>>>>> 936cb9252e355042c7693e22e6db8bd298c3d967
               <a href="#terms">Terms and Conditions</a>
             </div>
         </footer>

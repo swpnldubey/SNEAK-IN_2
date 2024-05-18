@@ -3,15 +3,20 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+<<<<<<< HEAD
   "type": "module",
   "scripts": {
     "start": "node server.js",
+=======
+  "scripts": {
+>>>>>>> 936cb9252e355042c7693e22e6db8bd298c3d967
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+<<<<<<< HEAD
     "@react-oauth/google": "^0.12.1",
     "axios": "^1.6.5",
     "body-parser": "^1.20.2",
@@ -21,5 +26,9 @@
     "mongodb": "^6.3.0",
     "mongoose": "^8.1.1",
     "parser": "^0.1.4"
+=======
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+>>>>>>> 936cb9252e355042c7693e22e6db8bd298c3d967
   }
 }

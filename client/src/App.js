@@ -1,5 +1,9 @@
 import {Home} from './pages'
+<<<<<<< HEAD
 import { Login, Register} from './pages';
+=======
+import { Login, Profile, Register} from './pages';
+>>>>>>> 936cb9252e355042c7693e22e6db8bd298c3d967
 import { BrowserRouter as Router, Routes, Route, Navigate} from 'react-router-dom';
 import { navigate, useNavigate} from 'react-router-dom';
 import { useEffect } from 'react';
@@ -9,7 +13,10 @@ import './index.css';
 import Navbar from './pages/Navbar'
 import Slider from './pages/Slider'
 import {Platform} from './pages';
+<<<<<<< HEAD
 import Modal from 'react-modal';
+=======
+>>>>>>> 936cb9252e355042c7693e22e6db8bd298c3d967
 
 // function Layout(){
   
@@ -51,7 +58,12 @@ function App() {
       <Routes>
            {/* <Route element={<Layout />}> */}
              <Route path='/platform' element={<Platform />} />
+<<<<<<< HEAD
                         {/* </Route> */}
+=======
+             <Route path='/profile/:id?' element={<Profile />} />
+           {/* </Route> */}
+>>>>>>> 936cb9252e355042c7693e22e6db8bd298c3d967
            <Route path='/register' element={<Register />} />
             <Route path='/' element={<Home />} />
            <Route path='/login' element={<Login />} />
@@ -62,4 +74,8 @@ function App() {
   );
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 936cb9252e355042c7693e22e6db8bd298c3d967
 export default App;

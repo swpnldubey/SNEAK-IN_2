@@ -40,9 +40,12 @@ bld/
 # Visual Studio 2017 auto generated files
 Generated\ Files/
 
+<<<<<<< HEAD
 #enviornment variables
 .env
 
+=======
+>>>>>>> 936cb9252e355042c7693e22e6db8bd298c3d967
 # MSTest test Results
 [Tt]est[Rr]esult*/
 [Bb]uild[Ll]og.*
