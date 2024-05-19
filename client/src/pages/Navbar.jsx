@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from "react";
 import { useRef } from "react";
 import { FaBars, FaTimes  } from "react-icons/fa";
@@ -37,23 +36,9 @@ function Navbar() {
 		</header>
 	);
 }
-=======
-import React from 'react';
-
-const Navbar = () => {
-  return (
-    <nav>
-      <div className="navbar-container">
-        <h1> <a href="/"> SNEAK IN </a> </h1>
-        {/* Add navigation links here */}
-        <div className="nav-links">
-          <a href="#colleges">Colleges</a>
-          <a href="/contact">Contact</a>
-        </div>
-      </div>
-    </nav>
-  );
-};
->>>>>>> 936cb9252e355042c7693e22e6db8bd298c3d967
 
 export default Navbar;
+
+
+
+
